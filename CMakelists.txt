@@ -21,16 +21,16 @@ file(GLOB_RECURSE HEADERS includes/*)
 add_executable(${NAME} ${SOURCES} ${HEADERS})
 
 set(LIBRARIES
-	${OPENGL_gl_LIBRARY}
-	glfw
-	glew)
+		${OPENGL_gl_LIBRARY}
+		glfw
+		glew)
 
 set(INCLUDES
-	sources/
-	includes/
-	dependencies/glew/include
-	dependencies/glfw/include
-	dependencies/glm/)
+		sources/
+		includes/
+		dependencies/glew/include
+		dependencies/glfw/include
+		dependencies/glm/)
 
 target_link_libraries(${NAME} ${LIBRARIES})
 target_include_directories(${NAME} PUBLIC ${INCLUDES})
